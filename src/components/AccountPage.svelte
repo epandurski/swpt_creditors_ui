@@ -182,6 +182,11 @@
   }
   .button-help {
     margin-top: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .button-icon {
+    margin-right: 0.5em;
   }
   .download-link {
     display: none;
@@ -284,21 +289,23 @@
           <DialogContent style="word-break: break-word">
             <p>
               Please look at the row of buttons at the bottom of the
-              screen.
+              screen. Use:
             </p>
             <p class="button-help">
-              Use
-              <Fab color="primary" style="vertical-align: middle">
-                <Icon class="material-icons">receipt</Icon>
-              </Fab>
-              to request a payment.
+              <span class="button-icon">
+                <Fab color="primary" style="vertical-align: middle">
+                  <Icon class="material-icons">receipt</Icon>
+                </Fab>
+              </span>
+              <span>to request a payment.</span>
             </p>
             <p class="button-help">
-              Use
-              <Fab style="vertical-align: middle">
-                <ExchangeSvgIcon />
-              </Fab>
-              to configure automatic currency exchanges.
+              <span class="button-icon">
+                <Fab style="vertical-align: middle">
+                  <ExchangeSvgIcon />
+                </Fab>
+              </span>
+              <span>to configure automatic currency exchanges.</span>
             </p>
           </DialogContent>
           <Actions>
