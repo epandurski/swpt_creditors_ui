@@ -90,7 +90,7 @@
     const { amountDivisor, decimalPlaces } = pegBound.display
     const unitAmount = amountToLocaleString(amount, amountDivisor, decimalPlaces)
     const unit = pegBound.display.unit
-    return `${unitAmount} ${unit}`
+    return `${unitAmount}\u00a0${unit}`
   }
 
   function scanCoin(): void {

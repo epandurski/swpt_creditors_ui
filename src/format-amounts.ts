@@ -59,7 +59,7 @@ export function amountToLocaleString(
   amountDivisor: number,
   decimalPlaces: number | bigint,
 ): string {
-  return amountToString(value, amountDivisor, decimalPlaces, localeDecimalSeparator, '\u202F')
+  return amountToString(value, amountDivisor, decimalPlaces, localeDecimalSeparator, ' ')
 }
 
 export function calcPegExampleAmount(peggedDisplay: Display, pegDisplay: Display, exchangeRate: number): number {

@@ -27,7 +27,7 @@
     const { amountDivisor, decimalPlaces } = pegBound.display
     const unitAmount = amountToLocaleString(x, amountDivisor, decimalPlaces)
     const unit = pegBound.display.unit
-    return `${unitAmount} ${unit}`
+    return `${unitAmount}\u00a0${unit}`
   }
 
   function tryToTranslateSummary(summary: string): string {
@@ -45,7 +45,7 @@
     margin-top: 16px;
   }
   .amounts-box {
-    flex: 0 0 20em;
+    flex: 0 1 20em;
   }
   .important-box {
     flex: 1 1 25em;
@@ -85,15 +85,15 @@
           <p class="amount">
             {#if index === 0}
               <span class:single-amount={pegBounds.length === 1}>
-                {calcDisplayAmount(amount, pegBound)}
+                &nbsp;&nbsp;{calcDisplayAmount(amount, pegBound)}
               </span>
             {:else}
               {#if showAccount !== undefined}
                 <a href="." target="_blank" rel="noreferrer" on:click|preventDefault={() => followPeg(pegBound.accountUri)}>
-                  = {calcDisplayAmount(amount, pegBound)}
+                  =&nbsp;{calcDisplayAmount(amount, pegBound)}
                 </a>
               {:else}
-                = {calcDisplayAmount(amount, pegBound)}
+                =&nbsp;{calcDisplayAmount(amount, pegBound)}
               {/if}
             {/if}
           </p>
