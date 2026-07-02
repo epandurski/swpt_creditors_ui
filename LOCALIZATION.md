@@ -49,8 +49,9 @@
    and CSS may be needed for all pages to show correctly.
 
 5. In the untranslated version, the amounts are represented using the
-   symbols `0-9`, no thousands separator, a locale-dependent decimal
-   separator, and an optional sign prefix. If the way numbers are
-   preferably represented in the target language is different, you may
-   change the implementation of the `amountToLocaleString` function in
-   the `src/format-amounts.ts` file.
+   symbols `0-9`, "\u202F" (narrow no-break space) as thousands
+   separator, a locale-dependent decimal separator, and an optional
+   sign prefix. If the way numbers are preferably represented in the
+   target language is different, you may change the implementation of
+   the `amountToLocaleString` function in the `src/format-amounts.ts`
+   file.
