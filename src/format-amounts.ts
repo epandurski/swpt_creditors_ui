@@ -101,8 +101,13 @@ function scientificToRegular(scientific: string, decimalSeparator: string): stri
 }
 
 function getLocaleDecimalSeparator(): string {
+  // Can only be "." or ",". Allowing other separators will likely
+  // cause more harm than good.
   const n: number = 1.1
-  return n.toLocaleString().substring(1, 2)
+  const separator = n.toLocaleString().substring(1, 2)
+  if (separator !== ',')
+    return '.'
+  return separator
 }
 
 export const localeDecimalSeparator = getLocaleDecimalSeparator();
