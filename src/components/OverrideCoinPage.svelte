@@ -187,7 +187,7 @@
                           <LinkPopup bind:show={showKnownCoinList}>1 pegged currency</LinkPopup>
                           uses the already known coin.
                         {:else}
-                          <LinkPopup bind:show={showKnownCoinList}>{knownCoinList.length} pegged currencies</LinkPopup>
+                          <LinkPopup bind:show={showKnownCoinList}>{knownCoinList.length.toLocaleString()} pegged currencies</LinkPopup>
                           use the already known coin.
                         {/if}
                       </li>
@@ -197,7 +197,7 @@
                             <LinkPopup bind:show={showNewCoinList}>1 pegged currency</LinkPopup>
                             suggests the same coin as "{peggedDebtorName}".
                           {:else}
-                            <LinkPopup bind:show={showNewCoinList}>{newCoinList.length} pegged currencies</LinkPopup>
+                            <LinkPopup bind:show={showNewCoinList}>{newCoinList.length.toLocaleString()} pegged currencies</LinkPopup>
                             suggest the same coin as "{peggedDebtorName}".
                           {/if}
                         </li>

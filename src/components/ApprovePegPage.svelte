@@ -237,7 +237,7 @@
                           "{pegDebtorName}", which may change the
                           way its amounts are displayed.
                         {:else}
-                          <LinkPopup bind:show={showCurrencies}>{currencyList.length} other currencies</LinkPopup>
+                          <LinkPopup bind:show={showCurrencies}>{currencyList.length.toLocaleString()} other currencies</LinkPopup>
                           will get indirectly pegged to
                           "{pegDebtorName}", which may change the
                           way their amounts are displayed.

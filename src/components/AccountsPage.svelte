@@ -189,7 +189,7 @@
                       Delete 1 unconfirmed account, which is not
                       properly configured.
                     {:else}
-                      Delete {unnamedAccountUris.length}
+                      Delete {unnamedAccountUris.length.toLocaleString()}
                       unconfirmed accounts, which are not properly
                       configured.
                     {/if}
@@ -269,7 +269,7 @@
             on:change={triggerFilterChange}
             >
               <HelperText slot="helper" persistent>
-                {shownAccounts.length}
+                {shownAccounts.length.toLocaleString()}
                 {#if shownAccounts.length == 1}
                   account
                 {:else}
