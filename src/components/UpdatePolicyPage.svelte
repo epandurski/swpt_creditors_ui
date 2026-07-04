@@ -298,9 +298,16 @@
                     touch
                     />
                   <span slot="label">
-                    Allow automatic buying and selling of this
-                    currency to keep the available amount within the
-                    defined limits, if possible.
+                    Allow
+                    {#if appConfig.understandAutomatedExchangesUrl}
+                      <a href="{appConfig.understandAutomatedExchangesUrl}" target="_blank" rel="noreferrer">
+                        automatic buying and selling
+                      </a>
+                    {:else}
+                      automatic buying and selling
+                    {/if}
+                    of this currency to keep the available amount
+                    within the defined limits, if possible.
                     {#if appConfig.exchangeFee}
                       Transaction fee: {appConfig.exchangeFee.toLocaleString(undefined, {maximumSignificantDigits: 3})}%.
                     {/if}
