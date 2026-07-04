@@ -2,6 +2,7 @@
 declare var appConfig: {
   siteTitle: string,
   findIssuersUrl: string,
+  understandAutomatedExchangesUrl: string,
   exchangeFee: number,
   baseDebtorInfoLocator: string,
   baseDebtorId: string,

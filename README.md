@@ -31,6 +31,11 @@ SITE_TITLE=Swaptacular
 # an empty string.
 FIND_ISSUERS_URL=https://www.google.com/maps
 
+# If you want to specify a website where your users can find more
+# information about how automated exchanges work, set this to the URL
+# of the website. The default is an empty string.
+UNDERSTAND_AUTOMATED_EXCHANGES_URL=https://swaptacular.github.io/
+
 # A number that will be shown to the users as the transaction fee in
 # percents, collected for arranged automatic exchanges. The default is
 # zero.

@@ -1,6 +1,7 @@
 window.appConfig = {
   siteTitle: 'Swaptacular',
   findIssuersUrl: '',
+  understandAutomatedExchangesUrl: '',
   exchangeFee: 0,
   baseDebtorInfoLocator: '',
   baseDebtorId: '',
