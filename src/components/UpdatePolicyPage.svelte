@@ -177,7 +177,7 @@
 
 <style>
   .radio-group > :global(*) {
-    margin: 0.4em 0 0 0.2em;
+    margin: 0.4em 0.2em 0 0.2em;
   }
   .fab-container {
     margin: 16px 16px;
