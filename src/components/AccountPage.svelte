@@ -26,6 +26,7 @@
   export const snackbarBottom: string = '84px'
 
   const scrollElement = document.documentElement
+  const pageModel = app.pageModel
   let isANewbie = localStorage.getItem(IS_A_NEWBIE_KEY) === 'true'
   let downloadLinkElement: HTMLAnchorElement
   let dataUrl: string
@@ -142,6 +143,15 @@
   function gotIt() {
     localStorage.setItem(IS_A_NEWBIE_KEY, 'false')
     isANewbie = false
+
+    // Make sure new users are unlikely to see "Requesting payments is
+    // not allowed" errors when trying to request a payment.
+    reload()
+  }
+
+  function reload(): void {
+    app.startInteraction()
+    app.fetchDataFromServer(() => $pageModel.reload())
   }
 
   $: if (sortRank !== model.sortRank) {
