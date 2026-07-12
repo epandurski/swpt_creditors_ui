@@ -1,6 +1,6 @@
 {
   "short_name": "${SITE_TITLE} Wallet",
-  "name": "${SITE_TITLE} Wallet Client",
+  "name": "${SITE_TITLE} Wallet",
   "description": "Allows you to connect to a specialized server and make and request payments in digital currencies.",
   "lang": "en",
   "dir": "ltr",
