@@ -1,8 +1,8 @@
 # How to localize
 
-1. Translate the messages in the `public/manifest.json` file. Do not
-   forget to set the correct values for the "lang" and "dir"
-   properties.
+1. Translate the messages in `public/manifest.json` and
+   `public/manifest.json.template` files. Do not forget to set the
+   correct values for the "lang" and "dir" properties.
 
 2. Translate the strings in the `src/messages.ts` file. The comments
    in this file can be helpful.
@@ -54,3 +54,7 @@
    are preferably represented in the target language is different, you
    may change the implementation of the `amountToLocaleString`
    function in the `src/format-amounts.ts` file.
+
+6. Make screenshots of the translated app and put them in the
+   `public/screenshots` directory, substituting the English
+   screenshots.
