@@ -25,11 +25,11 @@
       <Title>Welcome to {appConfig.siteTitle}!</Title>
       <Content>
         {appConfig.siteTitle} lets you hold, use, buy, and sell
-        digital currencies, including currencies that you create
-        yourself. Currency issuers are known as <em>debtors</em>,
-        while currency holders are known as <em>creditors</em>. This
-        app connects you to our server, which sets up and manages your
-        digital wallet.
+        digital currencies (digital vouchers), including currencies
+        that you create yourself. Currency issuers are known
+        as <em>debtors</em>, while currency holders are known
+        as <em>creditors</em>. This app connects you to our server,
+        which sets up and manages your digital wallet.
       </Content>
     </Paper>
   </div>
