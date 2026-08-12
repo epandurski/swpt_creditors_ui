@@ -41,6 +41,8 @@
   $: debtorData = action.debtorData
   $: interestRateChangeDate = new Date(action.interestRateChangedAt).toLocaleDateString()
   $: interestRate = action.interestRate.toLocaleString(undefined, {maximumFractionDigits: 3})
+  $: positiveInterestRate = action.interestRate > 0
+  $: negativeInterestRate = action.interestRate < 0
   $: configError = action.configError
 </script>
 
@@ -178,6 +180,11 @@
                     On {interestRateChangeDate} the issuer changed the
                     annual interest rate on your account to
                     {interestRate}%.
+                    {#if positiveInterestRate}
+                      A positive interest rate means that your available amount will increase over time.
+                    {:else if negativeInterestRate}
+                      A negative interest rate means that your available amount will decrease over time.
+                    {/if}
                   </li>
                 {/if}
 

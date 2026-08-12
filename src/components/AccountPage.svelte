@@ -352,6 +352,11 @@
                   0%.
                 {:else}
                   {interestRate.toLocaleString(undefined, {maximumFractionDigits: 3})}%.
+                  {#if interestRate > 0}
+                    Your available amount will increase over time.
+                  {:else}
+                    Your available amount will decrease over time.
+                  {/if}
                 {/if}
               </li>
               {#if scheduledForDeletion}
