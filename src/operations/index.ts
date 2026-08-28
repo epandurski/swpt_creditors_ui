@@ -510,8 +510,9 @@ export class UserContext {
     if (action.unsetKnownDebtor) {
       const exchange: AccountExchangeV0 = {
         ...account.exchange,
+        policy: undefined,
         minPrincipal: MIN_INT64,
-        maxPrincipal: account.exchange.policy !== undefined ? 0n : MAX_INT64,
+        maxPrincipal: MAX_INT64,
         latestUpdateId: account.exchange.latestUpdateId + 1n,
         pin,
       }
@@ -558,8 +559,9 @@ export class UserContext {
     await this.removeExistingPegs(action.accountUri, pin)
     const exchange: AccountExchangeV0 = {
       ...account.exchange,
+      policy: undefined,
       minPrincipal: MIN_INT64,
-      maxPrincipal: account.exchange.policy !== undefined ? 0n : MAX_INT64,
+      maxPrincipal: MAX_INT64,
       latestUpdateId: account.exchange.latestUpdateId + 1n,
       pin,
     }
