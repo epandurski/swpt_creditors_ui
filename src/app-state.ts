@@ -800,6 +800,7 @@ export class AppState {
         tinyNegligibleAmount,
       }
       await this.uc.replaceActionRecord(action, action = { ...action, state })
+      action.state = state
     }
 
     return this.attempt(async () => {
