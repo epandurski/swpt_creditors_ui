@@ -39,6 +39,7 @@ export class PinNotRequired extends Error {
 
 export const IS_A_NEWBIE_KEY = 'creditors.IsANewbie'
 export const HAS_NOT_CREATED_PEG_ACCOUNT = 'creditors.HasNotCreatedPegAccount'
+export const HAS_RECEIVED_TRADE_INSTRUCTIONS = 'creditors.HasReceivedTradeInstructions'
 
 export const currentWindowUuid = uuidv4()
 

@@ -18,7 +18,7 @@ import { writable } from 'svelte/store'
 import { calcSmallestDisplayableNumber } from './format-amounts'
 import { generatePr0Blob } from './payment-requests'
 import {
-  IS_A_NEWBIE_KEY, HAS_NOT_CREATED_PEG_ACCOUNT,
+  IS_A_NEWBIE_KEY, HAS_NOT_CREATED_PEG_ACCOUNT, HAS_RECEIVED_TRADE_INSTRUCTIONS,
   obtainUserContext, parseCoinUri, UserContext, AuthenticationError,
   IvalidPaymentData, IvalidPaymentRequest, InvalidCoinUri, DocumentFetchError, ServerSessionError,
   RecordDoesNotExist, WrongPin, ConflictingUpdate, UnprocessableEntity, CircularPegError,
@@ -33,7 +33,7 @@ type AttemptOptions = {
   waitingDelay?: number,
 }
 
-export { IS_A_NEWBIE_KEY, HAS_NOT_CREATED_PEG_ACCOUNT }
+export { IS_A_NEWBIE_KEY, HAS_NOT_CREATED_PEG_ACCOUNT, HAS_RECEIVED_TRADE_INSTRUCTIONS }
 
 export type {
   ActionRecordWithId,

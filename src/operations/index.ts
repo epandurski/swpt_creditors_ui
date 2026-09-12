@@ -40,7 +40,7 @@ import {
 } from './db'
 import {
   getOrCreateUserId, sync, storeObject, PinNotRequired, userResetsChannel, currentWindowUuid,
-  IS_A_NEWBIE_KEY, HAS_NOT_CREATED_PEG_ACCOUNT
+  IS_A_NEWBIE_KEY, HAS_NOT_CREATED_PEG_ACCOUNT, HAS_RECEIVED_TRADE_INSTRUCTIONS
 } from './db-sync'
 import { makePinInfo, makeAccount, makeTransfer, makeLogObject } from './canonical-objects'
 import {
@@ -63,6 +63,7 @@ export {
   ServerSessionError,
   IS_A_NEWBIE_KEY,
   HAS_NOT_CREATED_PEG_ACCOUNT,
+  HAS_RECEIVED_TRADE_INSTRUCTIONS,
   getCreateTransferActionStatus,
   getTransferStatusDetails,
   getExpectedPaymentAmount,
